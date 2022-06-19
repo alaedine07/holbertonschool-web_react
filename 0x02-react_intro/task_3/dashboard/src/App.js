@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App-container">
-      <div className="App-header">
+      <div className="App-Header">
         <img src={HolbertonLogo} alt="logo" />
         <h1>School dashboard</h1>
       </div>

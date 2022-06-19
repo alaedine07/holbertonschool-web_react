@@ -6,7 +6,7 @@ import { getLatestNotification } from './utils';
 export default function Notifications() {
     return (
       <div className='Notifications'>
-        <p>Here is the list of notifications</p>
+        <p data-testid="3">Here is the list of notifications</p>
         <ul>
           <li data-priority='default'>New course available</li>
           <li data-priority='urgent'>New resume available</li>
