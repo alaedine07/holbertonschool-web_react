@@ -6,6 +6,8 @@ import Login from '../Login/Login';
 import Footer from '../Footer/Footer';
 import PropTypes from 'prop-types';
 import CourseList from '../../CourseList/CourseList';
+import BodySection from '../BodySection/BodySection';
+import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
 import { getLatestNotification } from '../utils/utils';
 
 const listCourses = [
@@ -46,12 +48,18 @@ class App extends React.Component {
   if (!this.props.isLoggedIn) {
     return (
       <React.Fragment>
+        <BodySection title='News from the School'>
+          <p>You can find all school News here !</p>
+        </BodySection>
         <Notifications listNotifications={listNotifications} />
         <div className='App'>
           <Header />
         </div>
         <div className='App-body'>
+        <BodySectionWithMarginBottom title='Log in to continue'>
           <Login />
+        </BodySectionWithMarginBottom>
+
         </div>
         <div className='App-footer'>
           <Footer />
@@ -67,7 +75,9 @@ class App extends React.Component {
           <Header />
         </div>
         <div className='App-body'>
+        <BodySectionWithMarginBottom title='Course list'>
           <CourseList listCourses = {listCourses} />
+        </BodySectionWithMarginBottom>
         </div>
         <div className='App-footer'>
           <Footer />
